@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Book</title>
+</head>
+<body>
+
+<h1>Contact Book</h1>
+ <a href="/add">Add</a>
+ <a href="/search">Search</a>
+<br>
+<br>
+<br>
+<br>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact No</th>
+        <th>Action</th>
+    </tr>
+    {% for row in contactinfo %}
+    <tr>
+        <td>{{row.0}}</td>
+        <td>{{row.1}}</td>
+        <td>{{row.2}}</td>
+        <td>{{row.3}}</td>
+        <td>
+
+            <a href="/edit">Edit</a>
+            <a href="/delete/{{row.0}}">Delete</a>
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+ <a href="/search">Previous</a>
+ <a href="/search">Next</a>
+</body>
+</html>

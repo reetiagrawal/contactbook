@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Employee Info</title>
+</head>
+<body>
+
+<form action="{{url_for('edit1')}}" method="POST">
+
+    <label>Name:</label>
+     <input type="hidden" name="id"><br>
+    <input type="text" name="name" value=""><br>
+
+    <label>Email:</label>
+    <input type="email" name="email"><br>
+
+    <label>Contact No.:</label>
+    <input type="number" name="contact"><br>
+
+    <button type="submit">EDIT CONTACT</button>
+
+</form>
+
+</body>
+</html>
